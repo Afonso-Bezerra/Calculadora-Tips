@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Space;
+    src: url(assets/fonts/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: Input-space;
+    src: url(assets/fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: "icons";
+    src: url(assets/fontawesome-free-5.15.4-desktop/otfs/Font-Awesome-5-Free-Solid-900.otf);
+}
+
+/* Fundo */
+
+main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(177, 82%, 85%);
+    justify-content: center;
+}
+
+.text {
+    font-family: Space;
+    color: hsl(183, 100%, 15%);
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    letter-spacing: 13px;
+    padding: 8px;
+    justify-self: center;
+    grid-row: 1;
+    align-self: center;
+}
+ 
+/* Bloco Fundo */
+
+.bloco {
+    display: grid;
+    width: 850px;
+    height: 460px;
+    background-color: white;
+    box-shadow: -2px 2px 15px rgba(42, 95, 99, 0.192);
+    border-radius: 25px;
+    grid-row: 2 / 4;
+    align-self: flex-start;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3px;
+}
+
+/* Inputs */
+
+.inputs {
+    background-color: rgb(255, 255, 255);
+    grid-column: 1;
+    display: grid;
+    width: 95%;
+    height: 95%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    grid-template-rows: auto auto auto;
+}
+
+.bill {
+    background-color: rgb(255, 255, 255);
+    grid-row: 1;
+    padding: 30px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    position: relative
+}
+
+.bill label {
+    font-family: input-space;
+    display: block;
+    font-size: 15px;
+    padding: 5px 0;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: hsl(186, 14%, 43%)
+}
+
+.bill_input {
+    width: 360px;
+    height: 40px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid transparent;
+    text-align: right;
+    font-family: Space;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+    padding: 0px 10px;
+    display: inline-block;
+    background-color: hsla(185, 41%, 84%, 0.596);
+}
+
+.bill i::before {
+    position: absolute;
+    font-family: "icons";
+    content: '\f155';
+    color: hsl(183, 100%, 15%);
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.tips {
+    background-color: rgb(255, 255, 255);
+    grid-row: 2;
+    padding: 0 20px;
+    border-radius: 25px;
+    display: inline-block;
+    position: relative
+}
+
+.tips label {
+    font-family: input-space;
+    display: block;
+    font-size: 15px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: hsl(186, 14%, 43%)
+}
+
+.botoes {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linha1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linha2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.tips-input {
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: hsl(183, 100%, 15%);
+    width: 30%;
+    height: 50px;
+    font-weight: 700;
+    font-family: Space;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.tips-input-custom {
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: hsl(180, 2%, 88%);
+    width: 30%;
+    height: 50px;
+    font-weight: 700;
+    font-family: Space;
+    text-align: center;
+    font-size: 20px;
+    color: hsl(186, 14%, 43%);
+    transition: all 0.5s;
+}
+
+.number {
+    background-color: rgb(255, 255, 255);
+    grid-row: 3;
+    padding: 30px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    position: relative
+}
+
+.number label {
+    font-family: input-space;
+    display: block;
+    font-size: 15px;
+    padding: 5px 0;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: hsl(186, 14%, 43%)
+}
+
+
+.number i::before {
+    position: absolute;
+    font-family: "icons";
+    content: '\f007';
+    color: hsl(183, 100%, 15%);
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+
+/*  Resultado  */
+
+.resultado {
+    background-color: hsl(183, 100%, 15%);
+    grid-column: 2;
+    width: 95%;
+    height: 95%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows:  1fr 1fr 1fr;
+}
+
+.line1{
+    grid-row: 1;
+    padding: 30px 20px;
+    border-radius: 25px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.line1_text{
+    font-family: Space;
+    display: block;
+    font-size: 15px;
+    padding: 5px 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: hsl(0, 0%, 100%)
+}
+
+.line1_text h4{
+    font-size: 13px;
+    padding: 8px 3px;
+    color: rgba(255, 255, 255, 0.583);
+}
+
+.line1_value{
+    font-family: Space;
+    display: block;
+    font-size: 40px;
+    padding: 5px 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: hsl(172, 67%, 45%)
+}
+
+
+.line2{
+    grid-row: 2;
+    padding: 30px 20px;
+    border-radius: 25px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.line3{
+    grid-row: 3;
+    border-radius: 25px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.button_reset{
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid transparent;
+    width: 300px;
+    height: 50px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-family: Space;
+    font-size: 30px;
+}
