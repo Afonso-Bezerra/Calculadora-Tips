@@ -46,8 +46,8 @@ main {
 
 .bloco {
     display: grid;
-    width: 850px;
-    height: 460px;
+    width: 1000px;
+    height: 550px;
     background-color: white;
     box-shadow: -2px 2px 15px rgba(42, 95, 99, 0.192);
     border-radius: 25px;
@@ -91,7 +91,7 @@ main {
 }
 
 .bill_input {
-    width: 360px;
+    width: 415px;
     height: 40px;
     border-radius: 5px;
     outline: 0;
@@ -166,6 +166,12 @@ main {
     cursor: pointer;
 }
 
+.tips-input-select{
+    transition: all 0.5s;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
 .tips-input-custom {
     border-radius: 5px;
     outline: none;
@@ -200,7 +206,6 @@ main {
     color: hsl(186, 14%, 43%)
 }
 
-
 .number i::before {
     position: absolute;
     font-family: "icons";
@@ -209,7 +214,6 @@ main {
     padding: 10px 10px;
     font-size: 20px;
 }
-
 
 /*  Resultado  */
 
@@ -282,11 +286,18 @@ main {
     border-radius: 5px;
     outline: 0;
     border: 1px solid transparent;
-    width: 300px;
+    width: 250px;
     height: 50px;
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
     font-weight: 700;
     font-family: Space;
-    font-size: 30px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.button_reset:hover{
+    border: 1px solid hsl(180, 4%, 18%);
+    background-color: white;
+    transition: all 0.5s;
 }

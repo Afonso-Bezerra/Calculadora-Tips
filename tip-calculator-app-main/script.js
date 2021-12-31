@@ -5,7 +5,7 @@ function tips(value) {
     var input15 = document.getElementById('15');
     var input25 = document.getElementById('25');
     var input50 = document.getElementById('50');
-    var inputcustom = document.getElementById('custom');
+    var inputcustom = document.getElementById('input-custom');
 
     if (value == 5) {
         input5.style.backgroundColor = 'hsl(172, 67%, 45%)';
