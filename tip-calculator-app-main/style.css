@@ -19,15 +19,25 @@
 }
 
 /* Fundo */
-
-main {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsl(177, 82%, 85%);
-    justify-content: center;
+@media screen and (min-width:0px){
+    main {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(177, 82%, 85%);
+        justify-content: center;
+        overflow-x: hidden;
+    }
 }
+
+@media screen and (min-width:768px){
+    main {
+        overflow-x: block;
+    }
+}
+
+
 
 .text {
     font-family: Space;
@@ -43,41 +53,91 @@ main {
 }
  
 /* Bloco Fundo */
-
-.bloco {
-    display: grid;
-    width: 1000px;
-    height: 550px;
-    background-color: white;
-    box-shadow: -2px 2px 15px rgba(42, 95, 99, 0.192);
-    border-radius: 25px;
-    grid-row: 2 / 4;
-    align-self: flex-start;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3px;
+@media screen and (min-width:0px){
+    .bloco {
+        display: grid;
+        width: 100vw;
+        height: 120vh;
+        background-color: white;
+        box-shadow: -2px 2px 15px rgba(42, 95, 99, 0.192);
+        border-radius: 25px;
+        grid-row: 2 / 4;
+        align-self: flex-start;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 3px;
+    }
 }
+
+@media screen  and (min-width:768px){
+    .bloco {
+        width: 700px;
+        height: 550px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 3px;
+    }
+}
+
+@media screen  and (min-width:1024px){
+    .bloco {
+        width: 900px;
+    }   
+}
+
+@media screen  and (min-width:1444px){
+    .bloco {
+        width: 1000px;
+    }   
+}
+
 
 /* Inputs */
 
-.inputs {
-    background-color: rgb(255, 255, 255);
-    grid-column: 1;
-    display: grid;
-    width: 95%;
-    height: 95%;
-    justify-self: center;
-    align-self: center;
-    border-radius: 25px;
-    grid-template-rows: auto auto auto;
+@media screen and (min-width:0px){
+    .inputs {
+        background-color: rgb(255, 255, 255);
+        grid-row: 1;
+        display: grid;
+        width: 100%;
+        height: 95%;
+        padding: 0 10px;
+        justify-self: center;
+        align-self: center;
+        border-radius: 25px;
+        grid-template-rows: auto auto auto;
+    }
+    .bill {
+        background-color: rgb(255, 255, 255);
+        grid-row: 1;
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        position: relative
+    }
+    .bill_input {
+        width: 95%;
+        height: 40px;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0px 10px;
+        border: 1px solid transparent;
+        text-align: right;
+        font-family: Space;
+        font-weight: 700;
+        color: hsl(183, 100%, 15%);
+        font-size: 20px;
+        display: inline-block;
+        background-color: hsla(185, 41%, 84%, 0.596);
+    }
 }
 
-.bill {
-    background-color: rgb(255, 255, 255);
-    grid-row: 1;
-    padding: 30px 20px;
-    border-radius: 25px;
-    display: inline-block;
-    position: relative
+@media screen and (min-width:768px){
+    .inputs {
+        width: 90%;
+    }
+    .bill_input {
+        width: 95%;
+    }
 }
 
 .bill label {
@@ -90,21 +150,6 @@ main {
     color: hsl(186, 14%, 43%)
 }
 
-.bill_input {
-    width: 415px;
-    height: 40px;
-    border-radius: 5px;
-    outline: 0;
-    border: 1px solid transparent;
-    text-align: right;
-    font-family: Space;
-    font-weight: 700;
-    color: hsl(183, 100%, 15%);
-    font-size: 20px;
-    padding: 0px 10px;
-    display: inline-block;
-    background-color: hsla(185, 41%, 84%, 0.596);
-}
 
 .bill i::before {
     position: absolute;
@@ -217,17 +262,36 @@ main {
 
 /*  Resultado  */
 
-.resultado {
-    background-color: hsl(183, 100%, 15%);
-    grid-column: 2;
-    width: 95%;
-    height: 95%;
-    justify-self: center;
-    align-self: center;
-    border-radius: 25px;
-    display: grid;
-    grid-template-rows:  1fr 1fr 1fr;
+@media screen and (min-width:0px){
+    .resultado {
+        background-color: hsl(183, 100%, 15%);
+        grid-row: 2;
+        width: 95%;
+        height: 95%;
+        justify-self: center;
+        align-self: center;
+        border-radius: 25px;
+        display: grid;
+        grid-template-rows:  1fr 1fr 1fr;
+    }
 }
+
+@media screen and (min-width:768px){
+    .resultado {
+        background-color: hsl(183, 100%, 15%);
+        grid-column: 2;
+        grid-row: 1;
+        width: 95%;
+        height: 95%;
+        justify-self: center;
+        align-self: center;
+        border-radius: 25px;
+        display: grid;
+        grid-template-rows:  1fr 1fr 1fr;
+    }
+}
+
+
 
 .line1{
     grid-row: 1;
